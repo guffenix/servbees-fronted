@@ -11,15 +11,16 @@ import { ManejadorError } from './interceptor/manejador-error';
 import { RouterModule } from '@angular/router';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { LogoheroComponent } from './components/logohero/logohero.component';
 
 @NgModule({
-  declarations: [ToolbarComponent, NavbarComponent],
+  declarations: [ToolbarComponent, NavbarComponent, LogoheroComponent],
   imports: [
     CommonModule,
     RouterModule,
     MatToolbarModule
   ],
-  exports: [ToolbarComponent, NavbarComponent],
+  exports: [ToolbarComponent, NavbarComponent, LogoheroComponent],
   providers: [
     HttpService,
     SecurityGuard,
