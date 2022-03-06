@@ -9,6 +9,10 @@ import { MenuItem } from '@core/modelo/menu-item';
     border-bottom-width: 1px;
     display: block;
     height: 48px;
+    background-color: #F3F2F2;
+  }
+  
+  nav {
     padding: 0 16px;
   }
 
