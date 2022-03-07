@@ -1,6 +1,6 @@
 {
-  "/servbees-categoria/*": {
-    "target": "http://localhost:8081",
+  "/servbees-usuario/*": {
+    "target": "http://localhost:8080",
     "logLevel": "debug"
   }
 

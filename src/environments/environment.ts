@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  endpoint: 'http://localhost:8081/servbees-categoria'
+  endpoint: 'http://localhost:8080/servbees-usuario'
 };
 
 /*

@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  endpoint: '/servbees-categoria'
+  endpoint: '/servbees-usuario'
 };
