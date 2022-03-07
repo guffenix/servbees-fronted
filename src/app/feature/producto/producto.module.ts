@@ -8,6 +8,10 @@ import { ProductoComponent } from './components/producto/producto.component';
 import { SharedModule } from '@shared/shared.module';
 import { ProductoService } from './shared/service/producto.service';
 
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatFormFieldModule } from '@angular/material/form-field';
+
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
 @NgModule({
   declarations: [
@@ -18,7 +22,10 @@ import { ProductoService } from './shared/service/producto.service';
   ],
   imports: [
     ProductoRoutingModule,
-    SharedModule
+    SharedModule,
+    MatTabsModule,
+    MatFormFieldModule,
+    SweetAlert2Module.forRoot()
   ],
   providers: [ProductoService]
 })

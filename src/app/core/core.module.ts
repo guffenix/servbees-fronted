@@ -12,13 +12,21 @@ import { RouterModule } from '@angular/router';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { LogoheroComponent } from './components/logohero/logohero.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatIconModule } from '@angular/material/icon';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [ToolbarComponent, NavbarComponent, LogoheroComponent],
   imports: [
     CommonModule,
     RouterModule,
-    MatToolbarModule
+    MatButtonModule,
+    MatToolbarModule,
+    MatInputModule,
+    MatIconModule,
+    FormsModule
   ],
   exports: [ToolbarComponent, NavbarComponent, LogoheroComponent],
   providers: [

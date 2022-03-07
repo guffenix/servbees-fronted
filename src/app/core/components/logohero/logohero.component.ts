@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styles: [`
   
   .logo-hero {
+    padding-top: 30px;
     display: flex;
   } 
 
@@ -25,9 +26,33 @@ import { Component, OnInit } from '@angular/core';
     padding: 0px;
   }
 
+  .full-width {
+    width: 100%;
+  }
+  
+  .search-box {
+    width: 500px;
+  }
+
+  .logo-and-search {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .centrado-arriba {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .mat-fab.mat-primary {
+    border-radius: 5px;
+  }
   `]
 })
 export class LogoheroComponent implements OnInit {
+
+  value:string = '';
 
   constructor() { }
 
