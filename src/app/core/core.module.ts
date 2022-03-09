@@ -16,6 +16,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [ToolbarComponent, NavbarComponent, LogoheroComponent],
@@ -26,7 +27,8 @@ import { FormsModule } from '@angular/forms';
     MatToolbarModule,
     MatInputModule,
     MatIconModule,
-    FormsModule
+    FormsModule,
+    MatCardModule
   ],
   exports: [ToolbarComponent, NavbarComponent, LogoheroComponent],
   providers: [

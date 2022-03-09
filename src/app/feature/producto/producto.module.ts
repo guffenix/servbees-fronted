@@ -10,6 +10,7 @@ import { ProductoService } from './shared/service/producto.service';
 
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatButtonModule } from '@angular/material/button';
 
 import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 
@@ -25,7 +26,8 @@ import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
     SharedModule,
     MatTabsModule,
     MatFormFieldModule,
-    SweetAlert2Module.forRoot()
+    SweetAlert2Module.forRoot(),
+    MatButtonModule
   ],
   providers: [ProductoService]
 })
