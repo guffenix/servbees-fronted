@@ -1,0 +1,11 @@
+.card {
+    max-width: 400px;
+    min-width: 300px;
+}
+
+.centrado {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }

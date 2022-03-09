@@ -1,0 +1,20 @@
+<div class="centrado">
+    <mat-card class="card centrado">
+        <h1>Registrar Servicio</h1>
+        <form [formGroup]="servicioForm" (ngSubmit)="registrar()">
+          <h4>Selecciona un servicio</h4>
+          <mat-form-field appearance="fill">
+            <mat-label>Selecciona un servicio</mat-label>
+            <mat-select formControlName="idUsuarioPro">
+              <mat-option *ngFor="let categoria of categorias" [value]="categoria.id">
+                {{categoria.nombre}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        
+          <div class="centrado">
+            <button type="submit" mat-raised-button color="primary">Registrar</button>
+          </div>
+        </form>
+    </mat-card>
+</div>
