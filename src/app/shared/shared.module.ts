@@ -8,6 +8,10 @@ import { ErrorCamposPlantillaComponent } from './directivas/error-campos/compone
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { TrackByPipe } from './pipe/track-by.pipe';
 
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatCardModule } from '@angular/material/card';
+
 @NgModule({
   declarations: [
     ErrorCamposPlantillaComponent,
@@ -25,7 +29,10 @@ import { TrackByPipe } from './pipe/track-by.pipe';
     MensajeErrorCamposSubmitDirective,
     ReactiveFormsModule,
     FormsModule,
-    TrackByPipe
+    TrackByPipe,
+    MatInputModule,
+    MatSelectModule,
+    MatCardModule
   ]
 })
 export class SharedModule { }
