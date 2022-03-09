@@ -1,0 +1,22 @@
+<div class="fila">
+    <mat-card class="card centrado espacio-horizontal" *ngFor="let item of listaMejoresUsuarios | async">
+        
+        <mat-card-title>Servicio - {{item.nombreCategoria}}</mat-card-title>
+        <mat-divider inset></mat-divider>
+        <div class="espacio-vertical centrado">
+            <mat-card-subtitle>{{item.nombreUsuario}}</mat-card-subtitle>
+            <mat-card-content>
+                <p>
+                    <mat-icon class="stars" aria-hidden="false" aria-label="home icon" color="accent" >star</mat-icon>
+                    <mat-icon class="stars" aria-hidden="false" aria-label="home icon" color="accent">star</mat-icon>
+                    <mat-icon class="stars" aria-hidden="false" aria-label="home icon" color="accent">star</mat-icon>
+                </p>
+                <!-- <p>{{ item.nivelSatisfacion }}</p> -->
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-raised-button color="primary">Reservar</button>
+            </mat-card-actions>
+        </div>
+        
+    </mat-card>
+</div>

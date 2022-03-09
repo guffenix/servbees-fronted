@@ -1,0 +1,32 @@
+.card {
+    max-width: 400px;
+    min-width: 300px;
+}
+
+.centrado {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+.espacio-vertical {
+    padding: 15px;
+}
+
+.stars {
+    font-size: 50px;
+    margin: 10px;
+}
+
+.espacio-horizontal {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.fila {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
