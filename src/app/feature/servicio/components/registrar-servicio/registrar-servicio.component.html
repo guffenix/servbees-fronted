@@ -5,7 +5,7 @@
           <h4>Selecciona un servicio</h4>
           <mat-form-field appearance="fill">
             <mat-label>Selecciona un servicio</mat-label>
-            <mat-select formControlName="idUsuarioPro">
+            <mat-select formControlName="idCategoria">
               <mat-option *ngFor="let categoria of categorias" [value]="categoria.id">
                 {{categoria.nombre}}
               </mat-option>
