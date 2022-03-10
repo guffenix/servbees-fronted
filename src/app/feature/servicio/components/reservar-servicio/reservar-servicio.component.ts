@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Categoria } from '@servicio/shared/model/categorias';
 import { PreReservaServicio } from '@servicio/shared/model/pre-reserva-servicio';
 import { ServicioService } from '@servicio/shared/service/servicio.service';
 
@@ -19,7 +18,7 @@ export class ReservarServicioComponent implements OnInit {
   status: 'Cargando...' | 'Error' | 'Exitoso' | 'Inicial' = 'Inicial';
   servicioForm: FormGroup;
 
-  categorias: Categoria[] = [];
+  // categorias: Categoria[] = [];
   todosServicios: PreReservaServicio[] = [];
 
   unaModalidad = 'PH'; //: 'PH' | 'PD' | 'PS'  = 'PH';
@@ -37,12 +36,11 @@ export class ReservarServicioComponent implements OnInit {
 
   ngOnInit(): void {
     // this.construirFormularioServicio();
-    this.obtenerServicios();
     this.obtenerServiciosDisponibles();
   }
 
   private construirFormularioServicio(servicioSeleccionado: PreReservaServicio) {
-    console.log(this.costoTipo)
+    // console.log(this.costoTipo)
     let valores: string[] = this.costoTipo.split('-');
     this.costo = Number(valores[0]);
     this.unaModalidad = valores[1];
@@ -69,7 +67,7 @@ export class ReservarServicioComponent implements OnInit {
 
   reservar(servicioSeleccionado: PreReservaServicio) {
     this.construirFormularioServicio(servicioSeleccionado);
-    console.log(">>>", this.servicioForm.value)
+    // console.log(">>>", this.servicioForm.value)
     if (this.servicioForm.invalid) {
       Swal.fire({
         icon: 'error',
@@ -98,12 +96,6 @@ export class ReservarServicioComponent implements OnInit {
       });
     }
 
-  }
-
-  private obtenerServicios() {
-    this.servicioService.consultarCategorias().subscribe((categorias) => {
-      this.categorias = categorias;
-    })
   }
 
   private obtenerServiciosDisponibles() {
