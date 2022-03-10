@@ -11,6 +11,7 @@ import { TrackByPipe } from './pipe/track-by.pipe';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatCardModule } from '@angular/material/card';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { MatCardModule } from '@angular/material/card';
     TrackByPipe,
     MatInputModule,
     MatSelectModule,
-    MatCardModule
+    MatCardModule,
+    MatTableModule
   ]
 })
 export class SharedModule { }
