@@ -7,6 +7,7 @@ import Swal from 'sweetalert2';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogComponent } from './dialog/dialog.component';
 import { CalificaServicio } from '@servicio/shared/model/calificar-servicio';
+import { StorageService } from '@core/services/storage.service';
 
 @Component({
   selector: 'app-calificar-servicio',
@@ -24,9 +25,10 @@ export class CalificarServicioComponent implements OnInit {
 
   constructor(
     protected servicioService: ServicioService,
-    public dialog: MatDialog
-  ) {
-
+    public dialog: MatDialog,
+    protected servicioStorage: StorageService
+    ) {
+      this.miIdCliente = this.servicioStorage.obtenerId();
   }
 
   ngOnInit(): void {

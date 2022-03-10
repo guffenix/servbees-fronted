@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StorageService } from '@core/services/storage.service';
 
 @Component({
   selector: 'app-servicio',
@@ -7,7 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ServicioComponent implements OnInit {
 
-  constructor() { }
+  experienciaValida: boolean = false;
+
+  constructor(
+    protected servicioStorage: StorageService
+  ) {
+    this.experienciaValida=this.servicioStorage.obtenerExperiencia();}
 
   ngOnInit(): void {
   }

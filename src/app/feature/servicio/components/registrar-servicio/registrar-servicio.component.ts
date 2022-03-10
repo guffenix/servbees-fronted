@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { StorageService } from '@core/services/storage.service';
 import { Categoria } from '@servicio/shared/model/categorias';
 import { ServicioService } from '@servicio/shared/service/servicio.service';
 
@@ -17,13 +18,14 @@ export class RegistrarServicioComponent implements OnInit {
 
   categorias: Categoria[] = [];
 
-  miIdProveedor: number = 1;
+  private miIdProveedor: number = -1;  
 
   constructor(
-    protected servicioService: ServicioService
-    ) { 
-
-    }
+    protected servicioService: ServicioService,
+    protected servicioStorage: StorageService
+  ) {
+    this.miIdProveedor = this.servicioStorage.obtenerId();
+  }
 
   ngOnInit(): void {
     this.construirFormularioServicio();

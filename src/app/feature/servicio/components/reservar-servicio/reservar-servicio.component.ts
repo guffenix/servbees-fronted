@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { StorageService } from '@core/services/storage.service';
 import { PreReservaServicio } from '@servicio/shared/model/pre-reserva-servicio';
 import { ServicioService } from '@servicio/shared/service/servicio.service';
 
@@ -18,7 +19,6 @@ export class ReservarServicioComponent implements OnInit {
   status: 'Cargando...' | 'Error' | 'Exitoso' | 'Inicial' = 'Inicial';
   servicioForm: FormGroup;
 
-  // categorias: Categoria[] = [];
   todosServicios: PreReservaServicio[] = [];
 
   unaModalidad = 'PH'; //: 'PH' | 'PD' | 'PS'  = 'PH';
@@ -27,15 +27,16 @@ export class ReservarServicioComponent implements OnInit {
   estado: string = 'R';
   costoTipo: string = "";
 
-  miIdCliente: number = 1;
-  constructor(
-    protected servicioService: ServicioService
-  ) {
+  private miIdCliente: number = -1;
 
+  constructor(
+    protected servicioService: ServicioService,
+    protected servicioStorage: StorageService
+  ) {
+    this.miIdCliente = this.servicioStorage.obtenerId();
   }
 
   ngOnInit(): void {
-    // this.construirFormularioServicio();
     this.obtenerServiciosDisponibles();
   }
 
