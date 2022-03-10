@@ -1,0 +1,42 @@
+<mat-card class="card centrado">
+
+    <mat-card-title class="centrado">Servicio - {{data.nombreCategoria}}</mat-card-title>
+    <mat-divider inset></mat-divider>
+    <div class="espacio-vertical centrado">
+        <mat-card-subtitle class="centrado">{{data.nombreUsuario}}</mat-card-subtitle>
+        <mat-card-content>
+            <p>
+                <mat-radio-group aria-label="Califica el servicio recibido" class="radio-group"
+                    [(ngModel)]="nivelSatisfacion">
+                    <mat-radio-button value="SUP">
+                        <mat-icon class="stars" aria-hidden="false" aria-label="home icon" color="accent">star
+                        </mat-icon>
+                        <mat-icon class="stars" aria-hidden="false" aria-label="home icon" color="accent">star
+                        </mat-icon>
+                        <mat-icon class="stars" aria-hidden="false" aria-label="home icon" color="accent">star
+                        </mat-icon>
+                    </mat-radio-button>
+                    <mat-radio-button value="NOR">
+                        <mat-icon class="stars" aria-hidden="false" aria-label="home icon" color="accent">star
+                        </mat-icon>
+                        <mat-icon class="stars" aria-hidden="false" aria-label="home icon" color="accent">star
+                        </mat-icon>
+                    </mat-radio-button>
+                    <mat-radio-button value="INF">
+                        <mat-icon class="stars" aria-hidden="false" aria-label="home icon" color="accent">star
+                        </mat-icon>
+                    </mat-radio-button>
+                </mat-radio-group>
+            </p>
+
+        </mat-card-content>
+        <mat-card-actions >
+            <div class="centrado">
+                <button mat-button (click)="onNoClick()">Cancelar</button>
+                <button mat-raised-button color="primary" [mat-dialog-close]="nivelSatisfacion"
+                cdkFocusInitial>Calificar</button>
+            </div>
+        </mat-card-actions>
+    </div>
+
+</mat-card>

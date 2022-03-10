@@ -7,13 +7,15 @@ import { MatButtonModule } from '@angular/material/button';
 import { RegistrarServicioComponent } from './components/registrar-servicio/registrar-servicio.component';
 import { ReservarServicioComponent } from './components/reservar-servicio/reservar-servicio.component';
 import { CalificarServicioComponent } from './components/calificar-servicio/calificar-servicio.component';
+import { DialogComponent } from './components/calificar-servicio/dialog/dialog.component';
 
 @NgModule({
   declarations: [
     ServicioComponent,
     RegistrarServicioComponent,
     ReservarServicioComponent,
-    CalificarServicioComponent
+    CalificarServicioComponent,
+    DialogComponent
   ],
   imports: [
     ServicioRoutingModule,
