@@ -7,6 +7,7 @@ export class StorageService {
 
   private miIdPersonal: number = 0;
   private experienciaValida: boolean = false;
+  private estaLogeado: boolean = false;
 
   constructor() { }
 
@@ -24,6 +25,14 @@ export class StorageService {
 
   obtenerExperiencia(){
     return this.experienciaValida;
+  }
+
+  guardarEstaLogueado(nuevaEstado: boolean){
+    this.estaLogeado = nuevaEstado;
+  }
+
+  obtenerEstalogeado(){
+    return this.estaLogeado;
   }
 
 }
