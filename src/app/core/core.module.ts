@@ -19,6 +19,7 @@ import { FormsModule } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
 import { CardUserComponent } from './components/card-user/card-user.component';
 import { MatDividerModule } from '@angular/material/divider';
+import {MatMenuModule} from '@angular/material/menu';
 
 @NgModule({
   declarations: [ToolbarComponent, NavbarComponent, LogoheroComponent, CardUserComponent],
@@ -31,7 +32,8 @@ import { MatDividerModule } from '@angular/material/divider';
     MatIconModule,
     FormsModule,
     MatCardModule,
-    MatDividerModule
+    MatDividerModule,
+    MatMenuModule
   ],
   exports: [ToolbarComponent, NavbarComponent, LogoheroComponent, CardUserComponent],
   providers: [

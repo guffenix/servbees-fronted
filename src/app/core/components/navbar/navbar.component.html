@@ -1,3 +1,6 @@
 <nav>
-  <a mat-button *ngFor="let item of items" [routerLink]="item.url" routerLinkActive="active">{{item.nombre}}</a>
+  <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+  <mat-menu #menu="matMenu">
+    <a mat-menu-item *ngFor="let item of items" [routerLink]="item.url" routerLinkActive="active">{{item.nombre}}</a>
+  </mat-menu>
 </nav>
