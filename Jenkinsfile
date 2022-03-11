@@ -45,7 +45,8 @@ pipeline {
     stage('Unit Test') {
       steps {
         echo "------------>Testing<------------"
-        sh 'npm run test -- --watch=false --browsers ChromeHeadless'
+        sh 'npm run test'
+        //  -- --watch=false --browsers ChromeHeadless'
       }
     }
 
@@ -56,12 +57,12 @@ pipeline {
 //      }
 //    }
 
-    stage('esLint') {
-      steps {
-        echo "------------>Lint<------------"
-        sh 'npm run lint'
-      }
-    }
+    // stage('esLint') {
+    //   steps {
+    //     echo "------------>Lint<------------"
+    //     sh 'npm run lint'
+    //   }
+    // }
 
     stage('Static Code Analysis') {
        steps{
@@ -87,7 +88,7 @@ pipeline {
     }
     success {
       echo 'This will run only if successful'
-      junit '**/test-results/test/*.xml'
+      // junit '**/test-results/test/*.xml'
     }
     failure {
       echo 'This will run only if failed'
