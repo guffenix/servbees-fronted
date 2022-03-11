@@ -16,6 +16,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatRadioModule } from '@angular/material/radio';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { MatRadioModule } from '@angular/material/radio';
     MatDialogModule,
     MatIconModule,
     MatDividerModule,
-    MatRadioModule
+    MatRadioModule,
+    MatButtonModule
   ]
 })
 export class SharedModule { }

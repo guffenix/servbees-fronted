@@ -27,7 +27,7 @@ export class ReservarServicioComponent implements OnInit {
   estado: string = 'R';
   costoTipo: string = "";
 
-  private miIdCliente: number = -1;
+  miIdCliente: number = -1;
 
   constructor(
     protected servicioService: ServicioService,

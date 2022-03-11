@@ -2,15 +2,18 @@ import { waitForAsync, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NavbarComponent } from './navbar.component';
 
+import { MatMenuModule } from '@angular/material/menu';
+
 describe('NavbarComponent', () => {
   let component: NavbarComponent;
   let fixture: ComponentFixture<NavbarComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
-      declarations: [ NavbarComponent ]
+      declarations: [NavbarComponent],
+      imports: [MatMenuModule]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
